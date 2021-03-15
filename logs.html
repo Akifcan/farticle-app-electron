@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logs</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <button id="back"><span class="material-icons">arrow_back</span></button>
+        <h1>Geçmiş Kayıtları</h1>
+        <div class="logs">
+            <div class="remove-logs">
+                <b>Sil</b>
+                <ul>
+                    <li class="remove-log-item" data-time="last1Hour"><a href="#">Son 1 Saat</a></li>
+                    <li class="remove-log-item" data-time="last5Hour"><a href="#">Son 5 Saat</a></li>
+                    <li class="remove-log-item" data-time="last1Day"><a href="#">Son 1 Gün</a></li>
+                    <li class="remove-log-item" data-time="last1Year"><a href="#">Son 1 Yıl</a></li>
+                    <li class="remove-log-item" data-time="all"><a href="#">Hepsi</a></li>
+                </ul>
+            </div>
+            <div class="log-list">
+                <b>Geçmiş</b>
+                <div class="log-items" id="logItems">
+                </div>
+            </div>
+        </div>
+        <script type="module" src="./logs.js"></script>
+    </div>
+</body>
+
+</html>

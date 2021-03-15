@@ -1,0 +1,260 @@
+:root {
+  --ligth-mode-background-color: #dedede;
+  --dark-mode-background-color: #333;
+  --primary-color: #006994;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  /* background-color: var(--background-color); */
+}
+
+.container {
+  width: 95%;
+  margin: auto;
+  padding: 2rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: var(--dark-mode-background-color);
+    color: white;
+  }
+  .browser .search-result .result .description a {
+    color: white;
+  }
+
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background: var(--ligth-mode-background-color);
+    color: black;
+  }
+  .browser .search-result .result .description a {
+    color: black;
+  }
+
+}
+
+.favorite{
+  color: crimson;
+}
+
+button {
+  cursor: pointer;
+}
+
+.logo {
+  font-size: 5rem;
+  font-weight: lighter;
+}
+
+.menu {
+  height: 7vh;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.menu {
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+  padding: 0 0.3rem;
+}
+
+.settings-menu,
+.language-menu {
+  display: none;
+  position: absolute;
+  top: 7vh;
+  background-color: white;
+  padding: 0.5rem;
+  border-bottom: 2px solid var(--primary-color);
+  width: 40%;
+}
+.settings-menu {
+  right: 0;
+}
+.language-menu {
+  left: 0;
+}
+.active {
+  display: block;
+}
+
+.settings-menu ul {
+  line-height: 2;
+}
+
+.menu-button:nth-of-type(2) {
+  margin-left: auto;
+}
+
+.browser {
+  min-height: 93vh;
+}
+
+.browser .search-result {
+  width: 90%;
+  margin: auto;
+  padding: 3rem 0;
+  min-height: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.browser .search-result .result {
+  cursor: pointer;
+  border-bottom: 5px solid var(--primary-color);
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 2rem 0;
+  display: flex;
+  gap: 0.5rem;
+  padding: 0 0.4rem 1rem 0.4rem;
+}
+
+.browser .search-result .result .description{
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+
+
+
+.browser .search-result .result img {
+  width: 10rem;
+  object-fit: cover;
+}
+
+.browser .search-area {
+  min-height: 70vh;
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.browser .search {
+  width: 90%;
+  display: flex;
+  border-radius: 0.5rem;
+  box-shadow: -2px 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+.browser .search input {
+  border: none;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  flex: 1;
+  padding: 0.8rem;
+}
+
+.browser .search button {
+  border: none;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  padding: 0 1rem;
+}
+
+.browser .search button:hover {
+  opacity: 0.8;
+}
+
+.logs {
+  margin-top: 1rem;
+  display: flex;
+  gap: 2rem;
+  min-height: 93vh;
+}
+
+.logs .remove-logs {
+  padding: 0.3rem;
+  flex: 2;
+  border-right: 5px solid var(--primary-color);
+}
+
+.logs .log-list {
+  padding: 0.3rem;
+  flex: 3;
+}
+
+.logs ul {
+  margin-top: 2rem;
+  line-height: 2;
+}
+
+.remove-log-item a {
+  color: white;
+}
+
+.remove-log-item a:hover {
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
+.log-items {
+  margin-top: 2rem;
+}
+
+.log-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0 1rem 0;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.favorite-list{
+  gap: 1rem;
+  min-height: 70vh;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.favorite-item{
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 7em;
+  padding: .5rem;
+  width: 100%;
+  border: 4px solid var(--primary-color);
+}
+
+.favorite-item button{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.trash{
+  cursor: pointer;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  background-color: crimson;
+  padding: 1rem;
+  display: grid;
+  place-items: center;
+}
+
+
+
+

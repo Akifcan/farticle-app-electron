@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html base href="/" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Browser</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="language-menu" id="languageMenu">
+        <li><a href="#" data-language="en" class="language-item"> <img src="./images/languages/english.png"
+                    alt="english"> English </a>
+        </li>
+        <li><a href="#" data-language="tr" class="language-item"> <img src="./images/languages/turkish.png"
+                    alt="türkçe"> Türkçe </a></li>
+    </div>
+    <div class="settings-menu" id="settingsMenu">
+        <ul>
+            <li><a href="./logs.html" title="Geçmiş" aria-label="Geçmiş" data-language="log">Geçmiş</a></li>
+            <li><a href="./favorites.html" title="Yer İmleri" aria-label="Yer İmleri" data-language="favorites">Yer
+                    İmleri</a></li>
+            <li><a href="#" data-toggle="languageMenu" class="menu-button" data-language="language" title="Dil Değiştir"
+                    aria-label="Dil Değiştir">Dil Değiştir</a></li>
+            <li><a href="#" id="darkMode" title="Tema Değiştirin" data-language="theme" aria-label="Tema Değiştir">Tema
+                    Değiştir</a></li>
+        </ul>
+    </div>
+
+    <div class="menu">
+        <button id="returnHome" class="menu-button" tabindex="1" title="Ana Sayfa" aria-label="Ana Sayfaya Geçin">
+            <span class="material-icons">home</span>
+        </button>
+        <button class="menu-button" id="favoriteWindow" tabindex="2" title="Yer İmleri" aria-label="Yer İmleriniz">
+            <span class="material-icons">favorite</span>
+        </button>
+        <button data-toggle="settingsMenu" class="menu-button" tabindex="3" title="Seçenekler" aria-label="Seçenekler">
+            <span class="material-icons">more_horiz</span>
+        </button>
+
+    </div>
+    <div class="browser" id="app">
+        <!-- <div class="search-area">
+            <h1 class="logo"><b title="Find">F</b>Article</h1>
+            <div class="search">
+                <input tabindex="4" placeholder="Arama Yapın" type="search">
+                <button tabindex="5" title="Arayın" aria-label="Arayın"><span
+                        class="material-icons">search</span></button>
+            </div>
+        </div> -->
+        <!-- <div class="search-result">
+            <div class="search">
+                <input tabindex="4" placeholder="Arama Yapın" type="search">
+                <button tabindex="5" title="Arayın" aria-label="Arayın"><span
+                        class="material-icons">search</span></button>
+            </div>
+            <div class="results">
+                <div class="result">
+                    <img class="result-image" src="https://placekitten.com/300/200" alt="">
+                    <div class="description">
+                        <h2>Makale Başlığı</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde voluptatem molestiae illum
+                            vitae
+                            reiciendis. Reiciendis magni ad eveniet nobis tenetur!</p>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </div>
+    <script type="module" src="./script.js"></script>
+</body>
+
+</html>
